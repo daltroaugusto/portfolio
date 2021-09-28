@@ -1,0 +1,60 @@
+{
+  "home": {
+    "title": "Assistto | transformamos fórmulas em resultados",
+    "menu1": "Serviços",
+    "menu2": "Cursos",
+    "menu3": "Quem somos",
+    "cta": "Entre em contato",
+    "inner1": "Suas contas não fecham?",
+    "inner2": "Nós temos a chave pra você.",
+    "knowMore": "Saiba mais <i class=\"fas fa-chevron-down\"></i>",
+    "wedoforu": [
+      {
+        "title": "Aconselhamento jurídico",
+        "text": "Tendo problemas com o Leão ou com outros agentes financeiros? Damos uma mão com a melhor equipe jurista do mercado."
+      },
+      {
+        "title": "Fluxo de caixa",
+        "text": "Seu balanço não fecha? Vamos conferir como sobrepujar suas despesas e botar sua empresa de volta nos trilhos."
+      },
+      {
+        "title": "Organização financeira",
+        "text": "Seus registros, notas, recibos e demais documentos parecem fora de ordem? É hora de darmos um jeito nisso, empreendedor(a)."
+      }
+    ],
+    "testimonials": [
+      {
+        "text": "A equipe é muito competente, sempre me atenderam com muita presteza, resolvendo os problemas de maneira objetiva e sem danos colaterais.",
+        "author": "<em>John Cartly</em> -, CEO da Encritech."
+      },
+      {
+        "text": "Depois da Assistto, posso focar de verdade na essência da minha empresa, nem parece que vivo num país tão burocrático.",
+        "author": "<em>Andrea Raizuki</em> -, Diretora Jurídica da Synnis."
+      },
+      {
+        "text": "Recomendaria para qualquer pessoa que quer empreender. Não temos do que reclamar: o suporte é rápido, sempre a postos pra resolver qualquer impasse ou questão.",
+        "author": "<em>Henrique Quevedo</em> -, CEO da Tronical."
+      }
+    ],
+    "sectionArticles": "Artigos dos consultores",
+    "sectionHistory": "História e onde encontrar",
+    "article1": "O impacto das inovações arquivológicas para a importação em larga escala",
+    "article2": "Como o interacionismo simbólico pode contribuir para o UX Research",
+    "article3": "Business Intelligence e como pode te ajudar com o orçamento",
+    "seeAll": "Ver todos",
+    "executiveCouncil": "Conselho Executivo",
+    "marketingConsultancy": "Consultoria de Marketing",
+    "legalAdvice": "Consultoria Jurídica",
+    "financesConsultancy": "Consultoria Financeira",
+    "operationalConsultancy": "Consultoria Operacional",
+    "insertMsg": "Insira sua mensagem aqui."
+  },
+  "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu neque eget lectus dignissim tempus. Vestibulum eu odio varius urna efficitur vehicula eget eget nunc. Phasellus ut aliquet dolor, sit amet varius sapien. Quisque vel aliquet ex. Proin facilisis nisl ipsum, mattis pulvinar mauris suscipit a. Cras dictum magna eget felis ultricies venenatis. Suspendisse accumsan, ante a dapibus tempus, lorem tortor egestas elit, nec ultrices nulla ex sed lacus.",
+  "footer": [
+    "Feito com ♥ por <a target='_blank' href=\"http://github.com/daltroaugusto\">Daltro Augusto.</a>",
+    "Imagens disponíveis no <a target='_blank' href=\"https://unsplash.com/\">Unsplash</a>.",
+    "Ver bibliotecas utilizadas",
+    "Rua Visconde de Pelotas, 9999",
+    "Santa Maria, RS, Brasil"
+  ]
+}

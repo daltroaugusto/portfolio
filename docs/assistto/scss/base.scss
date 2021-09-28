@@ -1,0 +1,40 @@
+$bodyBg: #1b1b1b;
+
+html {
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  margin: 0px;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
+  background: $bodyBg;
+
+  &::before,
+  &::after {
+    content: "";
+    position: fixed;
+    top: -5%;
+    height: calc(100vh + 10%);
+    width: 60px;
+    z-index: 1001;
+    background: black;
+    filter: blur(33px);
+  }
+
+  &::before {
+    left: -45px;
+  }
+
+  &::after {
+    right: -45px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
