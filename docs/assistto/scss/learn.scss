@@ -1,0 +1,334 @@
+/**
+    Daltro Augusto's Portfolio
+    Copyright (C) 2021  Daltro Augusto
+
+    This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+@use 'base.scss';
+@use 'mixins.scss' as *;
+
+$coursesMargin: 4px;
+
+:root {
+  --pagePadding: 0vw 10vw;
+  --pagePaddingH: 10vw;
+  --innerMenuHeight: 36px;
+  --innerMenuTopMargin: 70px;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --pagePadding: 0vw 5vw;
+    --pagePaddingH: 5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --pagePadding: 0vw 3vw;
+    --pagePaddingH: 3vw;
+  }
+
+  .mainWrapper section.coursesGrid .rowof2 {
+    flex-direction: column;
+    height: auto !important;
+
+    > article {
+      width: 100% !important;
+      height: 170px !important;
+      margin-bottom: 4px;
+    }
+  }
+
+  section.headBanner .innerBanner h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .mainWrapper .categories ul {
+    justify-content: center;
+  }
+}
+
+body {
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+header {
+  visibility: hidden;
+}
+
+footer {
+  margin-top: 0px !important;
+}
+
+figure {
+  margin: 0px;
+  padding: 0px;
+}
+
+section.headBanner {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .innerBanner {
+    display: flex;
+    padding: var(--pagePadding);
+    height: calc(50vh - var(--innerMenuTopMargin) - var(--innerMenuHeight));
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3.5vh;
+    box-sizing: border-box;
+    text-align: center;
+
+    h1 {
+      // @include textstroke(rgba(10, 10, 10, 0.5), 1px);
+      text-shadow: 0px 0px 3px black;
+      font-family: "Amaranth", "Impact", sans-serif;
+      margin: 0px;
+      color: #f5f5f5;
+      font-size: 2rem;
+    }
+  }
+
+  .bg {
+    position: absolute;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    z-index: -200;
+    height: 50vh;
+    overflow: hidden;
+    align-items: center;
+
+    img {
+      width: 120vw;
+      filter: blur(2px) brightness(0.75);
+      object-fit: cover;
+      position: fixed;
+      z-index: -200;
+    }
+  }
+}
+
+.mainWrapper {
+  background: #f5f5f5;
+  padding-bottom: 100px;
+  font-family: "Lato", "Segoe UI", sans-serif;
+
+  .categories ul {
+    margin: 0px;
+    padding: 4px 16px;
+    padding-top: 0px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+
+    li {
+      padding: 2px 8px;
+      margin-top: 4px;
+      margin-right: 4px;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease-in;
+
+      &[active] {
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  .popular > h1,
+  .coursesList > h1 {
+    color: #2d2d2d;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    margin-left: 0px;
+  }
+
+  section.coursesGrid,
+  section.coursesList {
+    padding: var(--pagePadding);
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  section.coursesGrid {
+    .popular {
+      .rowof2:first-of-type {
+        //border-radius: 8px 8px 0px 0px;
+
+        article:first-of-type {
+          width: 60%;
+        }
+
+        article:last-of-type {
+          width: 40%;
+        }
+      }
+
+      .rowof2:last-of-type {
+        height: 200px;
+        margin-top: $coursesMargin;
+
+        article:first-of-type {
+          width: 40%;
+        }
+
+        article:last-of-type {
+          width: 60%;
+        }
+      }
+    }
+
+    .rowof2 {
+      display: flex;
+      width: 100%;
+      height: 300px;
+      align-items: flex-start;
+
+      @media screen and (max-width: 600px) {
+        height: 200px;
+      }
+
+      > article {
+        cursor: pointer;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 100%;
+        border-left: #{$coursesMargin} solid transparent;
+      }
+    }
+
+    article figure {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      z-index: 100;
+      display: inline-flex;
+      align-items: flex-end;
+      text-align: right;
+
+      &:hover {
+        > img {
+          transform: scale(1.05) rotate(1deg);
+        }
+      }
+
+      legend {
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2px 0.4rem;
+
+        h1,
+        h2 {
+          margin: 0px;
+          padding: 0px;
+          color: #fff !important;
+        }
+
+        h1 {
+          text-transform: none !important;
+          font-size: 1.15rem !important;
+        }
+
+        h2 {
+          text-transform: uppercase;
+          font-size: 1rem;
+          font-weight: normal;
+          display: inline-flex;
+          align-items: center;
+        }
+
+        img {
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          border: 2px solid #1b1b1b;
+          margin-right: 0.4rem;
+        }
+
+        i {
+          margin-left: 0.75rem;
+          margin-right: 4px;
+          transform: translateY(-2px);
+        }
+      }
+
+      > img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        transition: all 0.2s ease-in;
+      }
+    }
+  }
+
+  section.coursesList {
+    ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    li {
+      background: #dedede;
+      border-radius: 8px;
+      padding: 0px 12px;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        transform: scale(1.015);
+      }
+
+      h1,
+      h2 {
+        display: inline-block;
+        margin: 10px 0px;
+        font-size: 1.1rem;
+      }
+
+      h2 {
+        margin-top: 0px;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .headBanner .innerMenu {
+    visibility: hidden;
+    height: calc(var(--innerMenuHeight) / 2);
+  }
+}

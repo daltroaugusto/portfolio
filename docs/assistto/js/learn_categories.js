@@ -9,18 +9,15 @@
     You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
+for (category of $$(".categories li")) {
+  category.addEventListener("click", (e) => {
+    $(".categories li[active]").removeAttribute("active");
+    e.currentTarget.setAttribute("active", "true");
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  autoplay: {
-    delay: 5000,
-    pauseOnMouseEnter: true
-  },
-});
+    if (
+      $(".categories ul > li:nth-of-type(1)") == $(".categories li[active]")
+    ) {
+      $(".popular").style.display = "block";
+    } else $(".popular").style.display = "none";
+  });
+}

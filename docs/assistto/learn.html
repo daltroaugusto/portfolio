@@ -1,0 +1,261 @@
+<!--
+    Daltro Augusto's Portfolio
+    Copyright (C) 2021  Daltro Augusto
+
+    This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title string="learn.title"></title>
+
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <link rel="stylesheet" href="assets/fa/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/fa/css/solid.min.css" />
+  <link rel="stylesheet" href="assets/fa/css/brands.min.css" />
+
+  <link rel="stylesheet" href="assets/animate/animate.min.css" />
+
+  <link rel="stylesheet" href="css/learn.min.css" />
+
+  <script src="assets/polyfill-smoothscroll.min.js"></script>
+
+  <script src="js/isMobile.js"></script>
+  <script>
+    // jquery-free
+    const $ = (e) => document.querySelector(e);
+    const $$ = (e) => document.querySelectorAll(e);
+
+    window.pagename = 'learn';
+  </script>
+
+  <script defer src="js/locales.js"></script>
+  <script defer src="js/corrections.js"></script>
+  <script defer src="js/fixedHeader.js"></script>
+  <script defer src="js/learn_categories.js"></script>
+</head>
+
+<body>
+  <header hamburguerexpanded="false" class="innerMenu">
+
+  </header>
+
+  <main>
+    <section class="headBanner">
+      <div class="innerMenu">
+        <div class="logoWrap">
+          <img src="assets/imgs/logo.png" />
+        </div>
+        <div class="menu">
+          <nav>
+            <ul>
+              <a href="index.html">
+                <li string="learn.menu1"></li>
+              </a>
+              <a href="index.html#ourHistory">
+                <li string="learn.menu2"></li>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="innerBanner">
+        <h1 string="learn.bannerPhrase"></h1>
+      </div>
+
+      <div class="bg">
+        <img src="assets/imgs/teach.jpg" />
+      </div>
+    </section>
+
+    <section class="mainWrapper">
+      <nav class="categories">
+        <ul>
+          <li string="learn.categories[0]" active></li>
+          <li string="learn.categories[1]"></li>
+          <li string="learn.categories[2]"></li>
+          <li string="learn.categories[3]"></li>
+          <li string="learn.categories[4]"></li>
+          <li string="learn.categories[5]"></li>
+          <li string="learn.categories[6]"></li>
+          <li string="learn.categories[7]"></li>
+        </ul>
+      </nav>
+
+      <section class="coursesGrid">
+        <div class="popular">
+          <h1 string="learn.featuredCourses"></h1>
+          <div class="rowof2">
+            <article>
+              <figure>
+                <img src="assets/imgs/course1.jpg" />
+                <legend>
+                  <h1 string="learn.courses[0]"></h1>
+                  <h2>
+                    <img src="assets/imgs/author3.png" /> A. Nilsson
+                    <i class="fas fa-star"></i> 4.8
+                  </h2>
+                </legend>
+              </figure>
+            </article>
+            <article>
+              <figure>
+                <img src="assets/imgs/course2.jpg" />
+                <legend>
+                  <h1 string="learn.courses[1]"></h1>
+                  <h2>
+                    <img src="assets/imgs/author9.png" /> A. Abebe
+                    <i class="fas fa-star"></i> 4.9
+                  </h2>
+                </legend>
+              </figure>
+            </article>
+          </div>
+          <div class="rowof2">
+            <article>
+              <figure>
+                <img src="assets/imgs/course4.jpg" />
+                <legend>
+                  <h1 string="learn.courses[2]"></h1>
+                  <h2>
+                    <img src="assets/imgs/author4.png" /> I. Kriapkin
+                    <i class="fas fa-star"></i> 5.0
+                  </h2>
+                </legend>
+              </figure>
+            </article>
+            <article>
+              <figure>
+                <img src="assets/imgs/course3.jpg" />
+                <legend>
+                  <h1 string="learn.courses[3]"></h1>
+                  <h2>
+                    <img src="assets/imgs/author2.png" /> A. Silva
+                    <i class="fas fa-star"></i> 4.8
+                  </h2>
+                </legend>
+              </figure>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="coursesList">
+        <h1 string="learn.allCourses"></h1>
+
+        <ul>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <h1 string="learn.exampleTitle"></h1>
+            <br />
+            <i class="fas fa-user"></i>
+            <h2>T. de Paula</h2>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="credits">
+      <span string="footer[0]"></span>
+      <br />
+      <span string="footer[1]"></span>
+
+      <span class="libraries-used" string="footer[2]"></span>
+      <img src="assets/imgs/gplv3.png" class="licenseLogo" />
+    </div>
+    <div class="info">
+      <i class="fas fa-phone-alt"></i><span>+55 55 91234-5678</span>
+      <br /><i class="fas fa-map-marked-alt"></i><span string="footer[3]"></span>
+      <br /><i class="fas fa-city"></i><span string="footer[4]"></span>
+
+      <br /><br />
+      <div class="media-links">
+        <i class="fab fa-behance-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-facebook-square"></i>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

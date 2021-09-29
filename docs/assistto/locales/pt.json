@@ -1,9 +1,8 @@
 {
   "home": {
     "title": "Assistto | transformamos fórmulas em resultados",
-    "menu1": "Serviços",
-    "menu2": "Cursos",
-    "menu3": "Quem somos",
+    "menu1": "Cursos",
+    "menu2": "Quem somos",
     "cta": "Entre em contato",
     "inner1": "Suas contas não fecham?",
     "inner2": "Nós temos a chave pra você.",
@@ -48,6 +47,21 @@
     "financesConsultancy": "Consultoria Financeira",
     "operationalConsultancy": "Consultoria Operacional",
     "insertMsg": "Insira sua mensagem aqui."
+  },
+  "learn": {
+    "title": "Assistto | aprenda conosco",
+    "menu1": "Início",
+    "menu2": "Quem somos",
+    "bannerPhrase": "Aprenda com os melhores e garanta com mais autoridade e autonomia o sucesso do seu negócio.",
+    "categories": [
+      "Todos", "BI", "Direito", "Finanças", "Marketing", "Pesquisa", "Organização", "Tecnologia"
+    ],
+    "featuredCourses": "Cursos em destaque",
+    "courses": [
+      "Importar sem quebrar", "Publicidade nas ruas: como e quando fazer", "Big Data: principais usos e ferramentas", "Marcas e Legislação: tudo que você precisa saber"
+    ],
+    "allCourses": "Todos os cursos",
+    "exampleTitle": "Título de curso 1"
   },
   "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu neque eget lectus dignissim tempus. Vestibulum eu odio varius urna efficitur vehicula eget eget nunc. Phasellus ut aliquet dolor, sit amet varius sapien. Quisque vel aliquet ex. Proin facilisis nisl ipsum, mattis pulvinar mauris suscipit a. Cras dictum magna eget felis ultricies venenatis. Suspendisse accumsan, ante a dapibus tempus, lorem tortor egestas elit, nec ultrices nulla ex sed lacus.",
   "footer": [

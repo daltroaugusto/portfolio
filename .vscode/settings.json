@@ -8,5 +8,8 @@
       "savePathReplaceSegmentsWith": null
     }
   ],
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "licenser.license": "GPLv3",
+  "licenser.projectName": "Daltro Augusto's Portfolio",
+  "licenser.author": "Daltro Augusto"
 }
