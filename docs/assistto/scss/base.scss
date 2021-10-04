@@ -47,6 +47,14 @@ body {
   }
 }
 
+main {
+  transition: filter .2s ease-in;
+
+  @media screen and (max-width: 800px) {
+    transform: translateZ(0);
+  }
+}
+
 /* --------------------- */
 
 header.innerMenu {
@@ -69,7 +77,7 @@ header.innerMenu {
     opacity: 1 !important;
     flex-direction: column;
     align-items: flex-start;
-    height: auto;
+    height: 100vh;
     max-height: 36px;
     /* max-height: 500px; */
     transition: all 0.2s ease-in;
@@ -84,11 +92,19 @@ header.innerMenu {
     .menu nav {
       flex-direction: column;
       align-items: flex-start;
-    }
 
-    .menu nav ul li {
-      display: list-item;
-      padding: 4px 8px;
+      ul {
+        width: 100%;
+        margin-top: .75rem;
+
+        li {
+          display: list-item;
+          padding: 4px 8px;
+          background: rgba(255,255,255,.05);
+          text-align: center;
+          margin-bottom: .35rem;
+        }
+      }
     }
 
     .headHamburguer {
@@ -102,8 +118,15 @@ header.innerMenu {
     }
 
     &[hamburguerExpanded="true"] {
-      max-height: 500px !important;
+      max-height: 100vh !important;
     }
+  }
+
+  img.headerPicture {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
   }
 
   .headHamburguer {
@@ -151,6 +174,11 @@ header.innerMenu {
   }
 
   .menu {
+    @media screen and (min-width: 800px) {
+      width: calc(100% - 180px);
+      flex: 1 0 auto;
+    }
+
     width: 100%;
     
     div.cta-button,
@@ -190,6 +218,14 @@ header.innerMenu {
       border-radius: 8px;
       padding: 2px 4px;
 
+      @media screen and (max-width: 800px) {
+        padding: 5.5px 4px;
+        margin-top: .75rem;
+        width: calc(100% - 10px);
+        text-align: center;
+        display: inline-block;
+      }
+
       &:hover {
         background: #1b1b1b;
       }
@@ -228,11 +264,14 @@ header.innerMenu {
       li {
         padding: 0px 8px;
         cursor: pointer;
-        height: 100%;
         display: inline-flex;
         align-items: center;
         border-radius: 8px;
         transition: all 0.1s ease-in;
+
+        &:not(header li) {
+          height: 100%;
+        }
 
         &:hover {
           background: rgba(0, 0, 0, 0.5);
@@ -246,6 +285,10 @@ header.innerMenu {
 footer {
   @media screen and (max-width: 600px) {
     flex-direction: column-reverse;
+
+    .credits {
+      margin-top: 2rem;
+    }
   }
 
   display: flex;

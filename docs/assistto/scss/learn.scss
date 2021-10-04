@@ -112,10 +112,16 @@ section.headBanner {
 
     img {
       width: 120vw;
+      height: 58vh;
       filter: blur(2px) brightness(0.75);
+      -o-object-fit: cover;
       object-fit: cover;
       position: fixed;
       z-index: -200;
+      
+      @media screen and (max-width: 800px) {
+        margin-top: -50%;
+      }
     }
   }
 }
@@ -163,7 +169,7 @@ section.headBanner {
     text-transform: uppercase;
     font-size: 1rem;
     margin-bottom: 4px;
-    margin-left: 0px;
+    margin-left: 4px;
   }
 
   section.coursesGrid,
@@ -240,7 +246,7 @@ section.headBanner {
         background: rgba(0, 0, 0, 0.8);
         width: 100%;
         box-sizing: border-box;
-        padding: 2px 0.4rem;
+        padding: 2px 16px;
 
         h1,
         h2 {
@@ -256,7 +262,7 @@ section.headBanner {
 
         h2 {
           text-transform: uppercase;
-          font-size: 1rem;
+          font-size: .85rem;
           font-weight: normal;
           display: inline-flex;
           align-items: center;

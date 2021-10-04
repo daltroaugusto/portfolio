@@ -11,11 +11,11 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <title string="home.title"></title>
 
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <link rel="stylesheet" href="assets/fa/css/fontawesome.min.css" />
   <link rel="stylesheet" href="assets/fa/css/solid.min.css" />
@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="assets/animate/animate.min.css" />
   <link rel="stylesheet" href="assets/quill/quill.snow.css" />
 
-  <link rel="stylesheet" href="css/index.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
 
   <script src="assets/scrollmotion/scrollmotion.min.js"></script>
   <script src="assets/swiper/swiper-bundle.min.js"></script>
@@ -41,7 +41,11 @@
     window.pagename = 'index';
   </script>
 
-  <script defer src="js/locales.js"></script>
+  <script type="module">
+    import { loadLocale } from './js/locales.mjs';
+
+    loadLocale();
+  </script>
   <script defer src="js/corrections.js"></script>
   <script defer src="js/fixedHeader.js"></script>
   <script defer src="js/slider.js"></script>
@@ -63,8 +67,12 @@
         <div class="menu">
           <nav>
             <ul>
-              <a href="learn.html"><li string="home.menu1"></li></a>
-              <a href="#ourHistory"><li string="home.menu2"></li></a>
+              <a href="learn.html">
+                <li string="home.menu1"></li>
+              </a>
+              <a href="#ourHistory">
+                <li string="home.menu2"></li>
+              </a>
             </ul>
             <div class="cta-button">
               <span string="home.cta"></span>
@@ -190,33 +198,37 @@
 
         <div data-sm-ratio="0.05" class="articlesList">
           <article>
-            <figure>
-              <img src="assets/imgs/freight.jpg" />
-              <legend>
-                <div>
-                  <h1 string="home.article1"></h1>
-                  <div class="author">
-                    <img src="assets/imgs/author1.png" />
-                    <span>Millena Karenina</span>
+            <a href="article.html">
+              <figure>
+                <img src="assets/imgs/freight.jpg" />
+                <legend>
+                  <div>
+                    <h1 string="home.article1"></h1>
+                    <div class="author">
+                      <img src="assets/imgs/author1.png" />
+                      <span>Millena Karenina</span>
+                    </div>
                   </div>
-                </div>
-              </legend>
-            </figure>
+                </legend>
+              </figure>
+            </a>
           </article>
 
           <article>
-            <figure>
-              <img src="assets/imgs/coffee.jpg" />
-              <legend>
-                <div>
-                  <h1 string="home.article2"></h1>
-                  <div class="author">
-                    <img src="assets/imgs/author2.png" />
-                    <span>Ana Silva</span>
+            <a href="protectedArticle.html">
+              <figure>
+                <img src="assets/imgs/coffee.jpg" />
+                <legend>
+                  <div>
+                    <h1 string="home.article2"></h1>
+                    <div class="author">
+                      <img src="assets/imgs/author2.png" />
+                      <span>Ana Silva</span>
+                    </div>
                   </div>
-                </div>
-              </legend>
-            </figure>
+                </legend>
+              </figure>
+            </a>
           </article>
 
           <article>

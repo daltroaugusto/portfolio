@@ -12,37 +12,70 @@
 document.documentElement.addEventListener("localesloaded", () => {
   $("header").innerHTML = $("div.innerMenu").innerHTML;
 
-  const ctaBtn = $("header .cta-button").outerHTML;
-  $("header .cta-button").outerHTML = `<a class="cta-button" href="#headBanner">${ctaBtn}</a>`;
-  $("header .cta-button").onclick = () => {
-    $("#headBanner .cta-button").onclick();
-  };
+  if (window.pagename == "index") {
+    const ctaBtn = $("header .cta-button").outerHTML;
+    $(
+      "header .cta-button"
+    ).outerHTML = `<a class="cta-button" href="#headBanner">${ctaBtn}</a>`;
+    $("header .cta-button").onclick = () => {
+      $("#headBanner .cta-button").onclick();
+    };
+  }
 
-  const hamburguer = document.createElement('i');
-  hamburguer.className = 'fas fa-bars headHamburguer';
+  const hamburguer = document.createElement("i");
+  hamburguer.className = "fas fa-bars headHamburguer";
   hamburguer.onclick = () => {
-    const val = ($('header').getAttribute('hamburguerExpanded') == 'false') ? 'true' : 'false';
-    $('header').setAttribute('hamburguerExpanded', val);
-  };
+    const val =
+      $("header").getAttribute("hamburguerExpanded") == "false"
+        ? "true"
+        : "false";
+    $("header").setAttribute("hamburguerExpanded", val);
 
-  $('header').append(hamburguer);
-});
+    if (val == "true") {
+      $(".headHamburguer").className = "fas fa-times headHamburguer";
+      $(".headerPicture").style.visibility = "visible";
 
-if (!window.isMobile.any) {
-  const element = {
-    index: "#headBanner",
-    learn: "section.headBanner"
-  };
-
-  window.onscroll = (e) => {
-    const scrollval = document.documentElement.scrollTop;
-
-    if (scrollval >= $(element[window.pagename]).clientHeight) {
-      $("header").style.visibility = "visible";
-      $("header").style.opacity = "1";
+      setTimeout(() => {
+        $("main").style.filter = "blur(10px)";
+        $("footer").style.filter = "blur(10px)";
+        if ($("#headBanner")) $("#headBanner").style.filter = "blur(10px)";
+      }, 190);
     } else {
-      $("header").style.opacity = "0";
-      $("header").style.visibility = "hidden";
+      $(".headHamburguer").className = "fas fa-bars headHamburguer";
+      $(".headerPicture").style.visibility = "hidden";
+      setTimeout(() => {
+        $("main").style.filter = "none";
+        $("footer").style.filter = "none";
+        if ($("#headBanner")) $("#headBanner").style.filter = "none";
+      }, 190);
     }
   };
-}
+
+  const picture = document.createElement("img");
+  picture.src = "assets/imgs/menu.png";
+  picture.className = "headerPicture";
+  picture.style.visibility = "hidden";
+  const slogan = document.createElement("span");
+
+  $("header").append(hamburguer);
+  //$('header .menu .cta-button').insertAdjacentHTML('beforeBegin', picture.outerHTML);
+  $("header").append(picture);
+});
+
+const element = {
+  index: "#headBanner",
+  learn: "section.headBanner",
+  article: 'header'
+};
+
+window.onscroll = (e) => {
+  const scrollval = document.documentElement.scrollTop;
+
+  if (scrollval >= $(element[window.pagename]).clientHeight && document.documentElement.clientWidth >= 800) {
+    $("header").style.visibility = "visible";
+    $("header").style.opacity = "1";
+  } else {
+    $("header").style.opacity = "0";
+    $("header").style.visibility = "hidden";
+  }
+};

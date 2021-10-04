@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Assistto: dart and postcss",
+            "dependsOn": [
+                "dart:assistto",
+                "postcss:assistto"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "dart:assistto",
+            "type": "shell",
+            "command": "sass --watch \"docs/assistto/scss/:docs/assistto/scss-output/\" --style=compressed",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "new"
+            },
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "postcss:assistto",
+            "type": "shell",
+            "command": "postcss \"docs/assistto/scss-output/*.css\" --dir \"docs/assistto/css/\" --watch --map --use autoprefixer",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "new"
+            },
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

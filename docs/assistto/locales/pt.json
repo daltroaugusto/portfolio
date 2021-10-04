@@ -63,10 +63,25 @@
     "allCourses": "Todos os cursos",
     "exampleTitle": "Título de curso 1"
   },
+  "article": {
+    "title": "Exemplo de título de um artigo: uma descrição bem bolada",
+    "date": "16 dez. 2020",
+    "ttr": "5 min. para ler",
+    "imgcaption": "Legenda para a imagem"
+  },
+  "article2": {
+    "title": "Compreendendo este artigo",
+    "date": "16 dez. 2020",
+    "ttr": "5 min. para ler",
+    "passwordTitle": "Por favor, insira a senha se deseja ler o artigo.",
+    "passwordSub": "E aguarde um breve momento...",
+    "passwordPlaceholder": "Sua senha",
+    "wrongpass": "Senha incorreta. Tente novamente."
+  },
   "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu neque eget lectus dignissim tempus. Vestibulum eu odio varius urna efficitur vehicula eget eget nunc. Phasellus ut aliquet dolor, sit amet varius sapien. Quisque vel aliquet ex. Proin facilisis nisl ipsum, mattis pulvinar mauris suscipit a. Cras dictum magna eget felis ultricies venenatis. Suspendisse accumsan, ante a dapibus tempus, lorem tortor egestas elit, nec ultrices nulla ex sed lacus.",
   "footer": [
     "Feito com ♥ por <a target='_blank' href=\"http://github.com/daltroaugusto\">Daltro Augusto.</a>",
-    "Imagens disponíveis no <a target='_blank' href=\"https://unsplash.com/\">Unsplash</a>.",
+    "Imagens disponíveis no <a target='_blank' href=\"https://unsplash.com/\">Unsplash</a> e no <a target='_blank' href='https://storyset.com/'>Storyset</a>.",
     "Ver bibliotecas utilizadas",
     "Rua Visconde de Pelotas, 9999",
     "Santa Maria, RS, Brasil"
