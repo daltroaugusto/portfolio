@@ -1,0 +1,91 @@
+{
+  "home": {
+    "title": "Assistto | we transform formules in results",
+    "menu1": "Learn",
+    "menu2": "Who we are",
+    "cta": "Contact us",
+    "inner1": "Are your business expenses not settling up?",
+    "inner2": "We have the key for you.",
+    "knowMore": "Know more <i class=\"fas fa-chevron-down\"></i>",
+    "ourTeam": "Our team",
+    "wedoforu": [
+      {
+        "title": "Legal advice",
+        "text": "Are you having problems with government or another financial agents? We give you a hand with the best legal team of the market."
+      },
+      {
+        "title": "Cash flow",
+        "text": "Is your balance out of control? We will analyze how you could overcome any costs and getting your business back on track."
+      },
+      {
+        "title": "Financial organization",
+        "text": "Does it seems that your registers, notes, recipes and other documents are out of order? It's time for us to clean this up, entrepreneur."
+      }
+    ],
+    "testimonials": [
+      {
+        "text": "The team is very competent, always attend me with a lot of promptness, solving all issues in a clear way, without side effects.",
+        "author": "<em>John Cartly</em> -, CEO in Encritech."
+      },
+      {
+        "text": "Thanks to Assistto, now I can really focus on my business' essence, it not seems at all that I live in a so bureaucratic country.",
+        "author": "<em>Andrea Raizuki</em> -, Legal Directress in Synnis."
+      },
+      {
+        "text": "I would recommend it for any person that wants to open a business. We have nothing to complain: the support is fast, always on standby to solve any issue or question.",
+        "author": "<em>Henrique Quevedo</em> -, CEO in Tronical."
+      }
+    ],
+    "sectionArticles": "Consultants' articles",
+    "sectionHistory": "History and where to find",
+    "article1": "The impact of Archivology's innovations for large-scale importations",
+    "article2": "How symbolic interactionism can contribute to UX Research",
+    "article3": "Business Intelligence and how it can help you with finances",
+    "seeAll": "See all",
+    "executiveCouncil": "Executive Council",
+    "marketingConsultancy": "Marketing Council",
+    "legalAdvice": "Legal Council",
+    "financesConsultancy": "Finances Council",
+    "operationalConsultancy": "Technical Council",
+    "insertMsg": "Insert your message here."
+  },
+  "learn": {
+    "title": "Assistto | learn with us",
+    "menu1": "Home",
+    "menu2": "Who we are",
+    "bannerPhrase": "Learn with the best and guarantee with more autority and autonomy the sucess of your business.",
+    "categories": [
+      "All", "BI", "Law", "Finances", "Marketing", "Research", "Organization", "Technology"
+    ],
+    "featuredCourses": "Featured courses",
+    "courses": [
+      "Importing without bankrupting", "Street marketing: how and when", "Big Data: major use-cases and tools", "Branding and Law: everything you should know"
+    ],
+    "allCourses": "All courses",
+    "exampleTitle": "Course Title 1"
+  },
+  "article": {
+    "title": "Article's title example: and a smart description",
+    "date": "2020 dec. 16",
+    "ttr": "5 min. to read",
+    "imgcaption": "Picture's caption",
+    "comments": "1 commentary"
+  },
+  "article2": {
+    "title": "Understanding this article",
+    "date": "2020 dec. 16",
+    "ttr": "5 min. to read",
+    "passwordTitle": "Please, input the password if you want to read the article.",
+    "passwordSub": "And wait a little moment...",
+    "passwordPlaceholder": "Your password",
+    "wrongpass": "Incorrect password. Try again."
+  },
+  "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu neque eget lectus dignissim tempus. Vestibulum eu odio varius urna efficitur vehicula eget eget nunc. Phasellus ut aliquet dolor, sit amet varius sapien. Quisque vel aliquet ex. Proin facilisis nisl ipsum, mattis pulvinar mauris suscipit a. Cras dictum magna eget felis ultricies venenatis. Suspendisse accumsan, ante a dapibus tempus, lorem tortor egestas elit, nec ultrices nulla ex sed lacus.",
+  "footer": [
+    "Made with ♥ by <a target='_blank' href=\"http://github.com/daltroaugusto\">Daltro Augusto.</a>",
+    "Images available in <a target='_blank' href=\"https://unsplash.com/\">Unsplash</a> and <a target='_blank' href='https://designs.ai/'>Designs.ai</a>.",
+    "<a target='_blank' href='https://github.com/daltroaugusto/portfolio/tree/main/docs/assistto-dev'>Show utilized libraries</a>",
+    "Visconde de Pelotas St., 9999",
+    "Santa Maria, RS, Brazil"
+  ]
+}

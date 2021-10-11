@@ -1,0 +1,383 @@
+<!--
+    Daltro Augusto's Portfolio
+    Copyright (C) 2021  Daltro Augusto
+
+    This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title string="home.title"></title>
+
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="assets/fa/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/fa/css/solid.min.css" />
+  <link rel="stylesheet" href="assets/fa/css/brands.min.css" />
+
+  <link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/animate/animate.min.css" />
+  <link rel="stylesheet" href="assets/quill/quill.snow.css" />
+
+  <link rel="stylesheet" href="css/index.css" />
+
+  <script src="assets/scrollmotion/scrollmotion.min.js"></script>
+  <script src="assets/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/quill/quill.min.js"></script>
+  <script src="assets/polyfill-smoothscroll.min.js"></script>
+
+  <script src="js/isMobile.js"></script>
+  <script>
+    // jquery-free
+    const $ = (e) => document.querySelector(e);
+    const $$ = (e) => document.querySelectorAll(e);
+
+    window.pagename = 'index';
+  </script>
+
+  <script type="module" src="index.script.mjs"></script>
+  <script defer src="js/corrections.js"></script>
+  <script defer src="js/fixedHeader.js"></script>
+  <script defer src="js/slider.js"></script>
+  <script defer src="js/animations.js"></script>
+  <script defer src="js/contactForm.js"></script>
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <header hamburguerExpanded="false" class="innerMenu">
+
+    </header>
+
+    <section id="headBanner">
+      <div class="innerMenu">
+        <div class="logoWrap">
+          <img src="assets/imgs/logo.png" />
+        </div>
+        <div class="menu">
+          <nav>
+            <ul>
+              <a href="learn.html">
+                <li string="home.menu1"></li>
+              </a>
+              <a href="#ourHistory">
+                <li string="home.menu2"></li>
+              </a>
+            </ul>
+            <div class="cta-button">
+              <span string="home.cta"></span>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <section class="innerBanner">
+        <h2 string="home.inner1"></h2>
+        <h1 string="home.inner2"></h1>
+        <nav>
+          <a href="#main"><span string="home.knowMore"></span></a>
+        </nav>
+      </section>
+
+      <section class="innerContact">
+        <div class="contactTable">
+          <div>
+            <label for="name">Seu nome:</label>
+            <input type="text" id="name" placeholder="Nome" />
+
+            <label for="business">Sua empresa ou representação:</label>
+            <input type="text" id="business" placeholder="Representação" />
+
+            <label for="subject">Assunto:</label>
+            <select id="subject">
+              <option>Selecione um assunto</option>
+              <option value="0">Desejo de contrato</option>
+              <option value="1">Dúvidas sobre serviços</option>
+              <option value="2">Dúvidas sobre a Assistto</option>
+              <option value="3">Negociações em curso</option>
+              <option value="4">Planejamento de risco</option>
+              <option value="5">Outro</option>
+            </select>
+          </div>
+
+          <div>
+            <div id="message">
+              <p string="home.insertMsg"></p>
+            </div>
+
+            <button class="msgSubmit">
+              <span class="advice">Você também pode enviar um email para example@assistto.site</span>
+              <span>Enviar mensagem</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="bg">
+        <img style="width: 100vw;" src="assets/imgs/headacheman.jpg" />
+      </div>
+    </section>
+
+    <main id="main">
+      <section class="weDoForU">
+        <div class="bg"></div>
+
+        <div>
+          <figure class="sm-fades sm-ratio5">
+            <i class="fas fa-balance-scale"></i>
+            <legend>
+              <h1 string="home.wedoforu[0].title"></h1>
+              <p string="home.wedoforu[0].text"></p>
+            </legend>
+          </figure>
+        </div>
+        <div featured>
+          <figure class="sm-zoom">
+            <i class="fas fa-cash-register"></i>
+            <legend>
+              <h1 string="home.wedoforu[1].title"></h1>
+              <p string="home.wedoforu[1].text"></p>
+            </legend>
+          </figure>
+        </div>
+        <div>
+          <figure class="sm-fades sm-ratio5">
+            <i class="fas fa-receipt"></i>
+            <legend>
+              <h1 string="home.wedoforu[2].title"></h1>
+              <p string="home.wedoforu[2].text"></p>
+            </legend>
+          </figure>
+        </div>
+      </section>
+
+      <section class="testimonialsWrap">
+        <div class="testimonialsSlider">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <blockquote>
+                  <span string="home.testimonials[0].text"></span>
+                  <p string="home.testimonials[0].author" class="author"></p>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote>
+                  <span string="home.testimonials[1].text"></span>
+                  <p string="home.testimonials[1].author" class="author"></p>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote>
+                  <span string="home.testimonials[2].text"></span>
+                  <p string="home.testimonials[2].author" class="author"></p>
+                </blockquote>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ourArticles">
+        <h1 string="home.sectionArticles" data-sm-ratio="0.2"></h1>
+
+        <div data-sm-ratio="0.05" class="articlesList">
+          <article>
+            <a href="article.html">
+              <figure>
+                <img src="assets/imgs/freight.jpg" />
+                <legend>
+                  <div>
+                    <h1 string="home.article1"></h1>
+                    <div class="author">
+                      <img src="assets/imgs/author1.png" />
+                      <span>Millena Karenina</span>
+                    </div>
+                  </div>
+                </legend>
+              </figure>
+            </a>
+          </article>
+
+          <article>
+            <a href="protectedArticle.html">
+              <figure>
+                <img src="assets/imgs/coffee.jpg" />
+                <legend>
+                  <div>
+                    <h1 string="home.article2"></h1>
+                    <div class="author">
+                      <img src="assets/imgs/author2.png" />
+                      <span>Ana Silva</span>
+                    </div>
+                  </div>
+                </legend>
+              </figure>
+            </a>
+          </article>
+
+          <article>
+            <a href="article.html">
+              <figure>
+                <img src="assets/imgs/businessinteligence.jpg" />
+                <legend>
+                  <div>
+                    <h1 string="home.article3"></h1>
+                    <div class="author">
+                      <img src="assets/imgs/author3.png" />
+                      <span>Anders Nilsson</span>
+                    </div>
+                  </div>
+                </legend>
+              </figure>
+            </a>
+          </article>
+
+          <article>
+            <div>
+              <i class="fas fa-ellipsis-h"></i>
+              <span string="home.seeAll"></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="ourHistory" class="ourHistory">
+        <h1 string="home.sectionHistory"></h1>
+        <div class="history sm-faderight">
+          <p string="lorem">
+          </p>
+          <img src="assets/imgs/building.jpg" />
+        </div>
+        <div class="localization sm-fadeleft">
+          <div class="map-wrapper">
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-53.72009754180908%2C-29.722178672369612%2C-53.715988397598274%2C-29.71964432205288&amp;layer=mapnik&amp;marker=-29.7209115052107%2C-53.718042969703674"></iframe>
+          </div>
+          <p string="lorem">
+          </p>
+        </div>
+      </section>
+
+      <section class="ourTeam">
+        <h1 string="home.ourTeam">Nossa equipe</h1>
+        <div class="sm-bouncedown executive">
+          <h1 string="home.executiveCouncil">Conselho Executivo</h1>
+          <ul>
+            <li>
+              <img src="assets/imgs/author2.png" />
+              <h2>Ana Silva</h2>
+              <h3>Chief Executive Officer</h3>
+            </li>
+            <li>
+              <img src="assets/imgs/author4.png" />
+              <h2>Ivana Kriapkin</h2>
+              <h3>Chief Technology Officer</h3>
+            </li>
+            <li>
+              <img src="assets/imgs/author9.png" />
+              <h2>Ahmed Abebe</h2>
+              <h3>Chief Marketing Officer</h3>
+            </li>
+          </ul>
+        </div>
+        <div class="sm-bouncedown marketing">
+          <h1 string="home.marketingConsultancy"></h1>
+          <ul>
+            <li>
+              <img src="assets/imgs/author9.png" />
+              <h2>Ahmed Abebe</h2>
+            </li>
+            <li>
+              <img src="assets/imgs/author6.png" />
+              <h2>Kristina Kroeber</h2>
+            </li>
+          </ul>
+        </div>
+        <div class="sm-bouncedown law">
+          <h1 string="home.legalAdvice"></h1>
+          <ul>
+            <li>
+              <img src="assets/imgs/author2.png" />
+              <h2>Ana Silva</h2>
+            </li>
+            <li>
+              <img src="assets/imgs/author7.png" />
+              <h2>Karoline Jipkins</h2>
+            </li>
+            <li>
+              <img src="assets/imgs/author10.png" />
+              <h2>João Silveira</h2>
+            </li>
+          </ul>
+        </div>
+        <div class="sm-bouncedown finances">
+          <h1 string="home.financesConsultancy"></h1>
+          <ul>
+            <li>
+              <img src="assets/imgs/author3.png" />
+              <h2>Anders Nilsson</h2>
+            </li>
+            <li>
+              <img src="assets/imgs/author1.png" />
+              <h2>Millena Karenina</h2>
+            </li>
+          </ul>
+        </div>
+        <div class="sm-bouncedown operational">
+          <h1 string="home.operationalConsultancy"></h1>
+          <ul>
+            <li>
+              <img src="assets/imgs/author4.png" />
+              <h2>Ivana Kriapkin</h2>
+            </li>
+            <li>
+              <img src="assets/imgs/author5.png" />
+              <h2>Anne Carlson</h2>
+            </li>
+            <li>
+              <img src="assets/imgs/author8.png" />
+              <h2>Teodoro de Paula</h2>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="credits">
+        <span string="footer[0]"></span>
+        <br />
+        <span string="footer[1]"></span>
+
+        <span class="libraries-used" string="footer[2]"></span>
+        <a target="_blank" href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="assets/imgs/gplv3.png" class="licenseLogo" /></a>
+      </div>
+      <div class="info">
+        <i class="fas fa-phone-alt"></i><span>+55 55 91234-5678</span>
+        <br /><i class="fas fa-map-marked-alt"></i><span string="footer[3]"></span>
+        <br /><i class="fas fa-city"></i><span string="footer[4]"></span>
+
+        <br /><br />
+        <div class="media-links">
+          <i class="fab fa-behance-square"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-facebook-square"></i>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
