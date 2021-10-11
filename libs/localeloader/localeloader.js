@@ -1,1 +1,0 @@
-/home/mrdaltro/git/SimpleLocaleLoader/localeloader.js

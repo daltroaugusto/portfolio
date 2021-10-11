@@ -1,23 +1,27 @@
 /** @license
-  Copyright 2021 Daltro A. Campanher de Souza
+  Metaloader - ES6 function to easily get organized all metatags for your static website.
+  Copyright (C) 2021 Daltro A. Campanher de Souza
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
+  This program is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 3 of the License, or (at your option) any later version.
 
-      http://www.apache.org/licenses/LICENSE-2.0
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
+  You should have received a copy of the GNU Lesser General Public License
+  along with this program; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 // @ts-nocheck
 
 /**
  * Metaloader - ES6 function to easily get organized all metatags for your static website.
  *
+ * @namespace Metaloader
  * @async
  * @param {Object} data - Object with jsonSource URL or with accepted keys: charset, title, description, keywords, robots, author, creator, canonical, locale, type, image, url, site_name, viewport.
  * @param {String|false} eventListener - Window event to be awaited. If falsy or by default, meta will be appended immediately.
@@ -25,8 +29,10 @@
  */
 export default async (data, eventListener = false, newline = false) => {
   let obj = {
+    /**
+     * Map: [name, typeof, og<0||undefined:no,1:og-only,2:og-both>]
+     */
     ValidProps: [
-      // [name, type, og<0||undefined:no,1:og-only,2:og-both><optional>, tt<>]
       ["charset", "string"],
       ["title", "string", 2],
       ["description", "string", 2],
@@ -47,9 +53,8 @@ export default async (data, eventListener = false, newline = false) => {
   if (data.jsonSource) {
     obj.eventListener = eventListener;
     obj.newline = newline;
-    obj.jsonSource = data.jsonSource;
 
-    await loadJson(obj.jsonSource);
+    await loadJson(data.jsonSource);
     buildData();
   } else {
     obj.eventListener = eventListener;
@@ -59,9 +64,16 @@ export default async (data, eventListener = false, newline = false) => {
     buildData();
   }
 
+  /**
+   * Fetch data.jsonSource and loads into function.
+   * @async
+   * @returns {Promise}
+   * @memberof Metaloader
+   * @private
+   */
   async function loadJson() {
     return new Promise((resolve, reject) => {
-      fetch(obj.jsonSource)
+      fetch(this.jsonSource)
         .then(r => {
           r.json().then(data => {
             obj.data = data;
@@ -74,6 +86,11 @@ export default async (data, eventListener = false, newline = false) => {
     });
   }
 
+  /**
+   * Builds bundled html to be appended just-in-time or handled to a specific function defined in eventListener.
+   * @memberof Metaloader
+   * @private
+   */
   function buildData() {
     let $html = "";
 
@@ -92,6 +109,14 @@ export default async (data, eventListener = false, newline = false) => {
     }
   }
 
+  /**
+   * Parses each single data input.
+   * @param {String} key 
+   * @param {String} data 
+   * @returns {(String|'')} The parsed HTML or an empty string.
+   * @memberof Metaloader
+   * @private
+   */
   function parseData(key, data) {
     for (const prop of obj.ValidProps) {
       if (
@@ -125,6 +150,12 @@ export default async (data, eventListener = false, newline = false) => {
     return ""; // escaped from iteration? then it's not valid, returns empty
   }
 
+  /**
+   * Embeds title and charset elements, if needed, and appends the full previously generated metatags.
+   * @param {String} html 
+   * @memberof Metaloader
+   * @private
+   */
   function appendMeta(html) {
     const $ = el => document.querySelector(el);
 
@@ -144,6 +175,12 @@ export default async (data, eventListener = false, newline = false) => {
     $("meta[charset]").insertAdjacentHTML("afterEnd", html);
   }
 
+  /**
+   * Returns "\n" is newline is true.
+   * @returns {(String|'')}
+   * @memberof Metaloader
+   * @private
+   */
   function _newline() {
     if (obj.newline) {
       return "\n";
