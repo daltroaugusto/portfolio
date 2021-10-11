@@ -12,7 +12,7 @@
         {
             "label": "dart:assistto",
             "type": "shell",
-            "command": "sass --watch \"docs/assistto/scss/:docs/assistto/scss-output/\" --style=compressed",
+            "command": "sass --watch \"sites/assistto/scss/:sites/assistto/scss-output/\" --style=compressed",
             "presentation": {
                 "reveal": "silent",
                 "panel": "new"
@@ -26,7 +26,7 @@
         {
             "label": "postcss:assistto",
             "type": "shell",
-            "command": "postcss \"docs/assistto/scss-output/*.css\" --dir \"docs/assistto/css/\" --watch --map --use autoprefixer",
+            "command": "postcss \"sites/assistto/scss-output/*.css\" --dir \"sites/assistto/css/\" --watch --map --use autoprefixer",
             "presentation": {
                 "reveal": "silent",
                 "panel": "new"
