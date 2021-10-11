@@ -21,6 +21,16 @@ window.addEventListener("localesloaded", () => {
     $("header .cta-button").onclick = () => {
       $("#headBanner .cta-button").onclick();
     };
+    $("header a.cta-button").addEventListener("click", () => {
+      $(".headHamburguer").className = "fas fa-bars headHamburguer";
+      $("header").setAttribute("hamburguerExpanded", "false");
+      $(".headerPicture").style.visibility = "hidden";
+      setTimeout(() => {
+        $("main").style.filter = "none";
+        $("footer").style.filter = "none";
+        if ($("#headBanner")) $("#headBanner").style.filter = "none";
+      }, 190);
+    });
   }
 
   const hamburguer = document.createElement("i");
@@ -61,17 +71,6 @@ window.addEventListener("localesloaded", () => {
   $("header").append(hamburguer);
   //$('header .menu .cta-button').insertAdjacentHTML('beforeBegin', picture.outerHTML);
   $("header").append(picture);
-
-  $("header a.cta-button").addEventListener("click", () => {
-    $(".headHamburguer").className = "fas fa-bars headHamburguer";
-    $("header").setAttribute("hamburguerExpanded", "false");
-    $(".headerPicture").style.visibility = "hidden";
-    setTimeout(() => {
-      $("main").style.filter = "none";
-      $("footer").style.filter = "none";
-      if ($("#headBanner")) $("#headBanner").style.filter = "none";
-    }, 190);
-  });
 });
 
 const element = {
