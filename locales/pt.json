@@ -33,5 +33,6 @@
     {
       "description": "Um módulo ES6 realmente simples e mínimo que utiliza eval() para localização ou interpolação básicas e flexíveis."
     }
-  ]
+  ],
+  "licenseNotice": "Licenciado sob a licença GNU AGPLv3."
 }
