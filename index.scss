@@ -48,6 +48,13 @@ figure {
   margin-inline: 0px;
 }
 
+// transition stuff
+header,
+main {
+  transition: opacity .4s ease-in;
+  opacity: 0;
+}
+
 header {
   padding-top: 90px;
   position: relative;

@@ -59,4 +59,8 @@ locales
         },
       });
     });
+  })
+  .then(() => {
+    $('header').style.opacity = '1';
+    $('main').style.opacity = '1';
   });
