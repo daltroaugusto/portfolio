@@ -25,6 +25,7 @@
       ]
     }
   ],
+  "librariesTitle": "Bibliotecas",
   "libraries": [
     {
       "description": "Gera dinamicamente títulos e metatags, tornando seu site mais organizado e simplificando a construção de projetos (quase) livres de bibliotecas ou frameworks."

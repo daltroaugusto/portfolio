@@ -25,6 +25,7 @@
       ]
     }
   ],
+  "librariesTitle": "Libraries",
   "libraries": [
     {
       "description": "Dynamically generate title and metatags, making your website more organized and simplifying build of (almost) library-less projects."
