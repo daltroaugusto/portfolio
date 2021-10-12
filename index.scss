@@ -246,3 +246,18 @@ main {
     }
   }
 }
+
+footer {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  height: 4em;
+  text-align: right;
+  background: #fff;
+
+  span {
+    display: inline-block;
+    margin-top: 1.5em;
+    margin-right: 1em;
+  }
+}
