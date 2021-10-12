@@ -17,10 +17,14 @@
   <link rel="stylesheet" href="assets/fa/css/fontawesome.min.css" />
   <link rel="stylesheet" href="assets/fa/css/brands.min.css" />
   <link rel="stylesheet" href="assets/fa/css/solid.min.css" />
+  <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/fonts/stylesheet.css" />
 
+  <script src="assets/ejs.min.js"></script>
   <script src="assets/popper.min.js"></script>
   <script src="assets/tippy/tippy-bundle.umd.min.js"></script>
+  <script src="assets/swiper-bundle.min.js"></script>
+  <script src="assets/iconify.min.js"></script>
 
   <link rel="stylesheet" href="index.css" />
   <script src="index.script.mjs" type="module"></script>
@@ -38,19 +42,35 @@
     <nav class="social-links">
       <a target="_blank" href="https://www.linkedin.com/in/daltroaugusto/"><i class="fab fa-linkedin-in"></i></a>
       <a target="_blank" href="https://fiverr.com/"><i class="fas fa-shopping-cart"></i></a>
-      <a target="_blank" href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K8988197P6"><i class="fas fa-graduation-cap"></i></a>
+      <a target="_blank" href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K8988197P6"><i
+          class="fas fa-graduation-cap"></i></a>
     </nav>
   </header>
   <main>
-    <article>
-      <figure>
-        <div>
-          
-        </div>
-        <legend>
+    <div class="sites">
+      <!-- sites.ejs here -->
+    </div>
 
-        </legend>
-      </figure>
-    </article>
+    <nav class="libraries">
+      <h1>Bibliotecas</h1>
+      <ul>
+        <a target="_blank" href="https://github.com/daltroaugusto/ES6-Metaloader">
+          <li>
+            <h1>ES6-Metaloader&nbsp;
+              <span class="iconify-inline" data-icon="logos:es6" data-width="16" data-height="16"></span>
+            </h1>
+            <p string="libraries[0].description"></p>
+          </li>
+        </a>
+        <a target="_blank" href="https://github.com/daltroaugusto/SimpleLocaleLoader">
+          <li>
+            <h1>SimpleLocaleLoader&nbsp;
+              <span class="iconify-inline" data-icon="logos:es6" data-width="16" data-height="16"></span>
+            </h1>
+            <p string="libraries[1].description"></p>
+          </li>
+        </a>
+      </ul>
+    </nav>
   </main>
 </body>

@@ -1,20 +1,59 @@
+:root {
+  --pagePadding: 0px 20vw;
+
+  @media screen and (max-width: 1024px) {
+    --pagePadding: 0px 15vw;
+  }
+
+  @media screen and (max-width: 720px) {
+    --pagePadding: 0px 10vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    padding-top: 60px !important;
+
+    img {
+      width: 96px !important;
+      height: 96px !important;
+    }
+
+    h1 {
+      font-size: 2rem !important;
+    }
+  }
+}
+
 html {
   font-size: 12pt;
+
+  @media screen and (max-width: 300px) {
+    font-size: 10pt;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 13pt;
+  }
 }
 
 body {
-  margin: 0px 20vw;
+  margin: var(--pagePadding);
   background: #f3f2ef;
   font-family: "Linux Libertine Display O", serif;
+}
+
+figure {
+  margin-block: 0px;
+  margin-inline: 0px;
 }
 
 header {
   padding-top: 90px;
   position: relative;
   width: fit-content;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   margin: 0 auto;
-  line-height: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,8 +70,8 @@ header {
 
   h1 {
     font-size: 3rem;
-    font-family: 'Linux Libertine C';
-    margin-block-end: 1rem;
+    font-family: "Linux Libertine C";
+    margin-block-end: 0rem;
   }
 
   p {
@@ -62,6 +101,129 @@ header {
 
       &:hover {
         background: #444;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 24px;
+  padding-bottom: 64px;
+
+  div.sites {
+    article {
+      padding-top: 40px;
+
+      h1 {
+        display: block;
+        font-size: 1.5rem;
+        margin-block-start: 0.5rem;
+        margin-block-end: 10px;
+      }
+
+      .usedTechnologies {
+        text-align: right;
+
+        svg {
+          opacity: 0.75;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      p {
+        margin-block-start: 0.5rem;
+        font-size: 1.15rem;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: row-reverse;
+
+        button {
+          appearance: none;
+          border: 1px solid #ccc;
+          margin-left: 4px;
+          background: #050505;
+          color: #fff;
+          cursor: pointer;
+          padding: 8px 12px;
+
+          &:hover {
+            background: linear-gradient(to top, #050505, #202020);
+          }
+        }
+      }
+    }
+
+    figure > div {
+      height: 0px;
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 56.5%;
+    }
+
+    .swiper {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  nav.libraries {
+    margin-top: 6rem;
+
+    > h1 {
+      font-size: 1.75rem;
+      border-bottom: 4px solid #1b1b1b;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+
+      > a:not(:first-of-type) li {
+        margin-top: 0.5rem;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    li {
+      border: 2px solid #1b1b1b;
+      padding: 12px;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin: 0px;
+        display: flex;
+        font-size: 1.3rem;
+        align-items: center;
+      }
+
+      p {
+        margin: 8px 0px;
+      }
+
+      svg {
+        filter: grayscale(1);
       }
     }
   }

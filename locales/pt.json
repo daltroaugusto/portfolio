@@ -2,5 +2,35 @@
   "title": "Portfólio de Daltro Augusto",
   "slogan": "mais um desviante criativo da TI &lt;3",
   "socialBuy": "Compre seu template",
-  "socialAcademic": "Currículo acadêmico"
+  "socialAcademic": "Currículo acadêmico",
+  "seeSite": "Ver site",
+  "seeSource": "Ver código-fonte",
+  "sites": [
+    {
+      "title": "Assistto: transformamos fórmulas em resultados",
+      "description": "Website corporativo responsivo, com sliders, animações ao scrollar, criptografia embutida (<i>pssss... a senha é <b>potatoisgood</b></i>), que utiliza módulos nativos ES6 (compatível com qualquer navegador moderno).",
+      "url": "./sites/assistto/",
+      "sourceUrl": "https://github.com/daltroaugusto/portfolio/tree/main/sites/assistto",
+      "license": ["GNU GPLv3", "logos:gnu"],
+      "icons": [
+        ["logos:es6", "Este projeto utiliza tecnologia de ponta ECMAScript 2015 (ES6)"],
+        ["vscode-icons:file-type-scss2", "Este projeto utiliza o compilador Dart Sass"],
+        ["simple-icons:fontawesome", "Este projeto utiliza recursos do FontAwesome"],
+        ["simple-icons:swiper", "Este projeto faz uso da biblioteca Swiper"]
+      ],
+      "imgs": [
+        "./assets/imgs/assistto1.jpg",
+        "./assets/imgs/assistto2.jpg",
+        "./assets/imgs/assistto3.jpg"
+      ]
+    }
+  ],
+  "libraries": [
+    {
+      "description": "Gera dinamicamente títulos e metatags, tornando seu site mais organizado e simplificando a construção de projetos (quase) livres de bibliotecas ou frameworks."
+    },
+    {
+      "description": "Um módulo ES6 realmente simples e mínimo que utiliza eval() para localização ou interpolação básicas e flexíveis."
+    }
+  ]
 }

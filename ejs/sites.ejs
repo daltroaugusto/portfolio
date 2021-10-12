@@ -1,0 +1,63 @@
+<% for(const i in sites) { %>
+  <article site-id="<%= i %>">
+    <figure>
+      <div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <% sites[i]['imgs'].forEach(img=> { %>
+              <div class="swiper-slide">
+                <img src="<%- img %> " />
+              </div>
+              <% }) %>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <legend>
+        <h1>
+          <%- sites[i].title %>
+        </h1>
+        <div class="usedTechnologies">
+          <% for(const icon of sites[i].icons) { %>
+            <span class="iconify" data-tippy-content="<%- icon[1] %>" data-width="20" data-icon="<%- icon[0] %>"></span>
+            <% } %>
+        </div>
+        <p>
+          <%- sites[i].description %>
+        </p>
+      </legend>
+      <nav>
+        <a target="_blank" href="<%= sites[i].url %>">
+          <button>
+            <span>
+              <%- viewSiteCaption %>
+            </span>
+            <i class="fas fa-eye"></i>
+          </button>
+        </a>
+
+        <a target="_blank" href="<%= sites[i].sourceUrl %>">
+          <button>
+            <span>
+              <%- viewSourceCaption %>
+            </span>
+            <i class="fas fa-code"></i>
+          </button>
+        </a>
+      </nav>
+    </figure>
+  </article>
+
+  <script>
+    new Swiper("article[site-id='<%= i %>'] div.swiper", {
+      loop: true,
+      autoplay: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <% } %>
